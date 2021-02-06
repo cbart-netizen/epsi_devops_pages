@@ -1,25 +1,7 @@
-language: node_js
-node_js:
-  - '12'
-cache:
-  yarn: true
-  directories:
-    - public
-    - .cache
-script:
-  - yarn build # Générer des fichiers HTML statiques
-
 deploy:
   provider: pages
-  skip-cleanup: true
-  # Répertoire où se trouvent les fichiers générés
-  local_dir: public
-  # Github security/auth token
-  github-token: $GITHUB_TOKEN
-  # Conserve les anciens fichiers/constructions des déploiements précédents
-  keep-history: true
-  # La branche Git sur laquelle on souhaite déployer (master, gh-pages, foo...)
-  target_branch: gh-pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
   on:
-    # Quelle branche déclenchera le déploiement
-    branch: master
+    branch: main
