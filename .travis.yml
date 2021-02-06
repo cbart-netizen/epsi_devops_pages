@@ -1,4 +1,3 @@
-# C'est la partie obligatoire contenant l'étape de construction pour gatsby
 language: node_js
 node_js:
   - '12'
@@ -10,9 +9,7 @@ cache:
 script:
   - yarn build # Générer des fichiers HTML statiques
 
-# Voici la partie magique
 deploy:
-  # Utiliser le processus de déploiement des pages Github
   provider: pages
   skip-cleanup: true
   # Répertoire où se trouvent les fichiers générés
